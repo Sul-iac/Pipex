@@ -6,7 +6,7 @@
 /*   By: qbarron <qbarron@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:39:45 by qbarron           #+#    #+#             */
-/*   Updated: 2023/10/12 12:36:36 by qbarron          ###   ########.fr       */
+/*   Updated: 2024/06/12 17:25:51 by qbarron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,21 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-
-int	digits(int n) 
+int	digits(int n)
 {
-    int count = 0;
+	int	count;
 
-    if (n < 0) {
-        n *= -1;
-    }
-
-    do {
-        count++;
-        n /= 10;
-    } while (n != 0);
-
-    return count;
+	count = 0;
+	if (n < 0)
+	{
+		n *= -1;
+	}
+	while (n != 0)
+	{
+		count++;
+		n /= 10;
+	}
+	return (count);
 }
 
 void	sign_and_convert(int n, int i, char *dup, int len)
